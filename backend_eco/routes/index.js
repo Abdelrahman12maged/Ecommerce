@@ -5,7 +5,7 @@ const userSignUpController = require("../controllers/user/signup")
 
 
 router.post("/signup",userSignUpController)
-
+  
 
 
 
