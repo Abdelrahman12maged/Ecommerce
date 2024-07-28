@@ -9,7 +9,7 @@ try{
 
     const user = await userModel.findOne({email})
 
-    console.log("user",user)
+   
 
     if(user){
         throw new Error("Already user exits.")
@@ -50,7 +50,7 @@ try{
    
 }catch(err){
  res.json({
-  message:err,
+  message:err.message || err,
   error:true,
   sucess:false
 
@@ -60,5 +60,8 @@ try{
 
 
 }
+
+
+
 
 module.exports = userSignUpController
