@@ -11,7 +11,7 @@ abstract class AppRouter {
     routes: [
       GoRoute(
         path: '/',
-        builder: (context, state) =>  SplashView(),
+        builder: (context, state) =>  OnBoardingView(),
       ),
       GoRoute(
         path: kLoginView,

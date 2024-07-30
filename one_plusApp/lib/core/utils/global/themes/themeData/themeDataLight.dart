@@ -11,8 +11,8 @@ ThemeData getThemeDataLight(BuildContext context) => ThemeData(
   appBarTheme: AppBarTheme(color: Colors.amber),
 
   textTheme: TextTheme(
-     titleMedium:TextStyle(fontSize: getResponsiveFontSize(context, fontSize: 40), color: Colors.black) , 
-     titleSmall: TextStyle(fontSize: getResponsiveFontSize(context, fontSize: 35),color: Colors.black),
+     titleMedium:TextStyle(fontSize: getResponsiveFontSize(context, fontSize: 30), color: Colors.black) , 
+     titleSmall: TextStyle(fontSize: getResponsiveFontSize(context, fontSize: 25),color: Colors.black),
    
     // displayMedium: TextStyle(fontSize: 30, color: Colors.black,), 
     // bodyLarge: TextStyle(fontSize: 32, fontWeight: FontWeight.bold, color: Colors.black),

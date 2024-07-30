@@ -10,9 +10,11 @@ import '../../../generated/l10n.dart';
 class PageViewBuilder extends StatefulWidget {
   PageViewBuilder(
       {super.key,
-      required this.boardcontroller,
+     // required this.boardcontroller,
       required this.items,
-      required this.islast});
+  //    required this.islast
+      
+      });
 
   List<onBoardinItemModel> items;
   var boardcontroller = PageController();
