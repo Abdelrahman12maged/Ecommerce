@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:one_plus/Auth/presentation/view/LoginView.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:one_plus/core/utils/appRouter.dart';
+import 'package:one_plus/core/utils/global/themes/themeData/themeDataDark.dart';
+import 'package:one_plus/core/utils/global/themes/themeData/themeDataLight.dart';
+import 'package:one_plus/generated/l10n.dart';
+import 'package:device_preview/device_preview.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    DevicePreview(availableLocales: [Locale("ar"),Locale("en")],
+    enabled: true,
+    builder: (context) => 
+    const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -11,14 +20,27 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-   
-      theme: ThemeData(
-     
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home:LoginView(),
+    return MaterialApp.router(
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
+      debugShowCheckedModeBanner: false,
+      themeMode: ThemeMode.system,
+      routerConfig: AppRouter.router,
+    //  locale:  Locale("en"),
+
+       localizationsDelegates: [
+                S.delegate,
+                GlobalMaterialLocalizations.delegate,
+                GlobalWidgetsLocalizations.delegate,
+                GlobalCupertinoLocalizations.delegate,
+            ],
+            supportedLocales: S.delegate.supportedLocales,
+      darkTheme: getThemeDataDark(context),
+       theme: getThemeDataLight(context),
+      // darkTheme: getThemeDataDark(),
+      //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+       
+      
     );
   }
 }
