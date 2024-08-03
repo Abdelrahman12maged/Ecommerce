@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:one_plus/Features/onBoardingView/models/onBoardinItemModels.dart';
+import 'package:one_plus/Features/onBoardingView/data/models/onBoardinItemModels.dart';
 
 class onBoardingItems extends StatelessWidget {
   const onBoardingItems({super.key, required this.itemModel});
@@ -16,9 +16,11 @@ class onBoardingItems extends StatelessWidget {
           SizedBox(height: 15,),
         Expanded(
           child: Column(children: [  
-          Text(itemModel.title,style:textTheme.titleMedium,),
-           SizedBox(height: 15,),
-          Text(itemModel.subtitle,style: textTheme.titleSmall,textAlign: TextAlign.center,),],),
+          Expanded(flex: 2,
+            child: Text(itemModel.title,style:textTheme.titleMedium,)),
+        
+          Expanded(flex: 6,
+            child: Text(itemModel.subtitle,style: textTheme.titleSmall,textAlign: TextAlign.center,)),],),
         )
       ],
     );

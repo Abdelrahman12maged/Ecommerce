@@ -1,7 +1,7 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:one_plus/Features/onBoardingView/models/onBoardinItemModels.dart';
+import 'package:one_plus/Features/onBoardingView/data/models/onBoardinItemModels.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class Indicator extends StatelessWidget {

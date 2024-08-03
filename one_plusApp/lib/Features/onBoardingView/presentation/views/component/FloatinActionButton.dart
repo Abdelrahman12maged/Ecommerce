@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:one_plus/core/utils/appRouter.dart';
 
-class FloatinButton extends StatelessWidget {
-  FloatinButton(
+class FloatingButton extends StatelessWidget {
+  FloatingButton(
       {super.key, required this.pagecontroller, required this.islast});
 
   final PageController pagecontroller;
@@ -13,17 +13,19 @@ class FloatinButton extends StatelessWidget {
     final screenWidth = MediaQuery.of(context).size.width;
     
 
-    final buttonSize = screenWidth * 0.10; 
+    final buttonSize = screenWidth * 0.12; 
     final iconSize = buttonSize * 0.5; 
+    
 
-    return Container(width:buttonSize,height:buttonSize,
+    return Container(
+      width:buttonSize,height:buttonSize,
       child: FloatingActionButton(
               child:  Icon(size: iconSize,
           Icons.arrow_forward_ios),
         onPressed: () {
           if (islast) {
           //  print("last");
-            GoRouter.of(context).push(AppRouter.kLoginView);
+            GoRouter.of(context).push(AppRouter.kSignUpView);
           } else {
             print("not lastt");
             pagecontroller.nextPage(
