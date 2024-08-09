@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:one_plus/core/utils/SizieConfig.dart';
 import 'package:one_plus/core/utils/appRouter.dart';
 import 'package:one_plus/core/utils/global/themes/themeData/themeDataDark.dart';
 import 'package:one_plus/core/utils/global/themes/themeData/themeDataLight.dart';
@@ -11,7 +10,7 @@ void main() {
   runApp(
     
     DevicePreview(availableLocales: [Locale("ar"),Locale("en")],
-    enabled: false,
+    enabled: true,
     builder: (context) => 
     const MyApp()));
 }

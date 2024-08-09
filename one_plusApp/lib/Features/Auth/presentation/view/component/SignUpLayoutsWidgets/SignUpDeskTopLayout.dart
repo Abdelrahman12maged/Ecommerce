@@ -61,7 +61,7 @@ class SignUpDesktopLayout extends StatelessWidget {
                       height: 25,
                     ),
                     Center(
-                      child: DefaultButton(
+                      child: CustomButton(height: 40,
                           function: () {
                             
                           }, text: "sign up", width: 130),

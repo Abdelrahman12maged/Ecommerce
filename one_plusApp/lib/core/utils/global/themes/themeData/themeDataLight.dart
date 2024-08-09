@@ -8,7 +8,7 @@ ThemeData getThemeDataLight(BuildContext context) => ThemeData(
    
   scaffoldBackgroundColor: AppColorsLight.Scaffoldbackgroundcolor,
   floatingActionButtonTheme: FloatingActionButtonThemeData(backgroundColor: AppColorsLight.floatingbutton,),
-  appBarTheme: AppBarTheme( color: AppColorsLight.appBarLigtColor),
+  appBarTheme: AppBarTheme( color: AppColorsLight.appBarLigtColor,),
 
   textTheme: TextTheme(
      titleMedium:TextStyle(fontSize: getResponsiveFontSize(context, fontSize: 30), color: Colors.black) , 

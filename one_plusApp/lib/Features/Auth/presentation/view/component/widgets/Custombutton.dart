@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 
-class DefaultButton extends StatelessWidget {
+class CustomButton extends StatelessWidget {
   final double width;
+  final double height;
   final Color background;
   final VoidCallback function;
   final String text;
 
-  const DefaultButton({
+  const CustomButton({
     Key? key,
-    this.width = double.infinity,
+   required this.width ,
+    required this.height,
     this.background = Colors.deepOrange,
     required this.function,
     required this.text,
@@ -22,14 +24,14 @@ class DefaultButton extends StatelessWidget {
         color: background,
       ),
       width: width,
-      height: 40,
+      height: height,
       child: MaterialButton(
         onPressed: function,
         child: Text(
           text,
           style: TextStyle(
             color: Color.fromARGB(255, 231, 224, 224),
-            fontSize: 25,
+            fontSize: 20,
             fontWeight: FontWeight.bold,
           ),
         ),

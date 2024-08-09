@@ -25,7 +25,7 @@ class FloatingButton extends StatelessWidget {
         onPressed: () {
           if (islast) {
           //  print("last");
-            GoRouter.of(context).push(AppRouter.kSignUpView);
+            GoRouter.of(context).pushReplacement(AppRouter.kSignUpView);
           } else {
             print("not lastt");
             pagecontroller.nextPage(
