@@ -22,6 +22,20 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "confirm_password_hint":
+            MessageLookupByLibrary.simpleMessage("Confirm password"),
+        "confirm_password_label":
+            MessageLookupByLibrary.simpleMessage("Confirm Password:"),
+        "email_hint": MessageLookupByLibrary.simpleMessage("Enter email"),
+        "email_label": MessageLookupByLibrary.simpleMessage("Email:"),
+        "have_account":
+            MessageLookupByLibrary.simpleMessage("Already have  account ?  "),
+        "login": MessageLookupByLibrary.simpleMessage("Login"),
+        "name_hint": MessageLookupByLibrary.simpleMessage("Enter your name"),
+        "name_label": MessageLookupByLibrary.simpleMessage("Name:"),
+        "password_hint": MessageLookupByLibrary.simpleMessage("Enter password"),
+        "password_label": MessageLookupByLibrary.simpleMessage("Password:"),
+        "sign_up": MessageLookupByLibrary.simpleMessage("sign up"),
         "subtitle1": MessageLookupByLibrary.simpleMessage(
             "Explore our extensive collection of the latest electronic devices."),
         "subtitle2": MessageLookupByLibrary.simpleMessage(
@@ -33,6 +47,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "title2":
             MessageLookupByLibrary.simpleMessage("Secure and Easy Payment"),
         "title3":
-            MessageLookupByLibrary.simpleMessage("Real-time Order Tracking")
+            MessageLookupByLibrary.simpleMessage("Real-time Order Tracking"),
+        "uploadimageCirclAvatar":
+            MessageLookupByLibrary.simpleMessage("Upload Image")
       };
 }

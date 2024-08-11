@@ -7,9 +7,24 @@
     "title2": "Secure and Easy Payment",
     "subtitle2": "Experience hassle-free and secure payment options for your purchases.",
     "title3": "Real-time Order Tracking",
-    "subtitle3": "Stay updated with real-time tracking of your orders."
+    "subtitle3": "Stay updated with real-time tracking of your orders.",
 
 
+
+    "uploadimageCirclAvatar":"Upload Image",
+
+
+    "name_label": "Name:",
+    "name_hint": "Enter your name",
+    "email_label": "Email:",
+    "email_hint": "Enter email",
+    "password_label": "Password:",
+    "password_hint": "Enter password",
+    "confirm_password_label": "Confirm Password:",
+    "confirm_password_hint": "Confirm password",
+     "sign_up":"sign up",
+     "have_account":"Already have  account ?  ",
+     "login":"Login"
 
 
 

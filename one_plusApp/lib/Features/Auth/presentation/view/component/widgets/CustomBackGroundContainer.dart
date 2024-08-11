@@ -13,10 +13,14 @@ class CustomBackGroundContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+       // final isDarkMode = Theme.of(context).brightness == Brightness.dark;
+
     return Container(
       width: containerWidth,
       //   height: containerHeight,
-      color: Colors.white,
+      color: Theme.of(context).colorScheme.background,
+       //isDarkMode ?Colors.black:Colors.white
+      
      child:child ,
        // إضافة محتوى الحاوية
     );

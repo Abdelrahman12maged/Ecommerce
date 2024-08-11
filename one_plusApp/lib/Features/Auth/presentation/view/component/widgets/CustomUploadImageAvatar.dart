@@ -2,6 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:one_plus/core/utils/assetsImages.dart';
 
+import '../../../../../../generated/l10n.dart';
+
 class CustomUploadImageAvatar extends StatelessWidget {
   const CustomUploadImageAvatar({
     super.key,
@@ -9,36 +11,37 @@ class CustomUploadImageAvatar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-          height: 100,
-          width: 80,
-          child: Stack(
-            alignment: Alignment.center,
-            children: [
-              CircleAvatar(
-                radius: 40,
-                backgroundImage: AssetImage(Assets.imagesSignin),
+         final themdata=Theme.of(context);
+
+    return Stack(
+      alignment: Alignment.center,
+      children: [
+        CircleAvatar(
+          radius: 40,
+          backgroundImage: AssetImage(Assets.imagesSignin),
+        ),
+        Positioned(
+          bottom: 0,
+        
+  
+          child: Container(
+
+            decoration: BoxDecoration(  
+                     color: Colors.white.withOpacity(0.3),
+
+              shape: BoxShape.circle),
+            height: 80,
+            width: 90,
+            padding: EdgeInsets.symmetric(vertical: 4),
+            child: Center(
+              child: Text(
+                S.of(context).uploadimageCirclAvatar,
+                style:themdata.textTheme.bodySmall
               ),
-              Positioned(
-                bottom: 0,
-                child: Container(
-                  height: 50,
-                  width: 80,
-                  color: Colors.white.withOpacity(0.9),
-                  padding: EdgeInsets.symmetric(vertical: 4),
-                  child: Center(
-                    child: Text(
-                      'Upload Image',
-                      style: TextStyle(
-    fontSize: 10,
-    color: Colors.black,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ],
+            ),
           ),
-        );
+        ),
+      ],
+    );
   }
 }

@@ -15,11 +15,9 @@ class SignUpView extends StatelessWidget {
       appBar: CustomAppBar(),
       body: AdaptiveLayout(
         desktopLayout: (context) => const SignUpDesktopLayout(),
-        tabletLayout: (context) => const SignUpDesktopLayout (),
-        mobileLayout: (context) => const SignUpDesktopLayout (),
+        tabletLayout: (context) => const SignUpDesktopLayout(),
+        mobileLayout: (context) => const SignUpDesktopLayout(),
       ),
     );
   }
 }
-
-

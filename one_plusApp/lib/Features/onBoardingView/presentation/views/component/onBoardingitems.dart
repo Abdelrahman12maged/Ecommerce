@@ -6,7 +6,7 @@ class onBoardingItems extends StatelessWidget {
   final onBoardinItemModel itemModel;
   @override
   Widget build(BuildContext context) {
-     final textTheme=Theme.of(context).textTheme;
+     final themdata=Theme.of(context);
     return Column(
       children: [
     
@@ -17,10 +17,10 @@ class onBoardingItems extends StatelessWidget {
         Expanded(
           child: Column(children: [  
           Expanded(flex: 2,
-            child: Text(itemModel.title,style:textTheme.titleMedium,)),
+            child: Text(itemModel.title,style:themdata.textTheme.titleMedium,)),
         
           Expanded(flex: 6,
-            child: Text(itemModel.subtitle,style: textTheme.titleSmall,textAlign: TextAlign.center,)),],),
+            child: Text(itemModel.subtitle,style:themdata. textTheme.titleSmall,textAlign: TextAlign.center,)),],),
         )
       ],
     );

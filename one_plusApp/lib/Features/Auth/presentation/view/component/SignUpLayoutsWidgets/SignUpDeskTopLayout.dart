@@ -27,6 +27,7 @@ import 'package:one_plus/Features/Auth/presentation/view/component/widgets/textH
 import 'package:one_plus/core/utils/SizieConfig.dart';
 import 'package:one_plus/core/utils/assetsImages.dart';
 
+import '../../../../../../generated/l10n.dart';
 import '../widgets/CustomBackGroundContainer.dart';
 
 class SignUpDesktopLayout extends StatelessWidget {
@@ -35,10 +36,10 @@ class SignUpDesktopLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SizeConfig.init(context);
-
+    final str=S.of(context);
     double containerWidth = SizeConfig.width * 0.3;
 
-    containerWidth = containerWidth.clamp(300.0, 800.0);
+    containerWidth = containerWidth.clamp(400.0, 800.0);
     return SingleChildScrollView(
       child: Center(
         child: Padding(
@@ -61,17 +62,17 @@ class SignUpDesktopLayout extends StatelessWidget {
                       height: 25,
                     ),
                     Center(
-                      child: CustomButton(height: 40,
+                      child: CustomButton(
                           function: () {
                             
-                          }, text: "sign up", width: 130),
+                          }, text: str.sign_up),
                     ),
                     SizedBox(
                       height: 25,
                     ),
-                    textHaveOrNotHaveAccount(text1: "Already have  account?  ",onTapText2: () {
+                    textHaveOrNotHaveAccount(text1:str.have_account ,onTapText2: () {
                       
-                    },text2: "Login",)
+                    },text2:str.login ,)
                   ],
                 ),
               )),

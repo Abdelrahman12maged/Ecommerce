@@ -11,13 +11,24 @@ ThemeData getThemeDataDark(BuildContext context) => ThemeData(
 
    
   scaffoldBackgroundColor: AppColorsDark.Scaffoldbackgroundcolor,
-  floatingActionButtonTheme: FloatingActionButtonThemeData(backgroundColor: AppColorsLight.floatingbutton,),
- // appBarTheme: AppBarTheme(color: AppColorsLight.appBarLigtColor),
+  floatingActionButtonTheme: FloatingActionButtonThemeData(
+    backgroundColor: AppColorsLight.floatingbutton,),
+  appBarTheme: AppBarTheme(color: AppColorsDark.Appbarbackgroundcolor),
+  colorScheme: ColorScheme.light(  brightness: Brightness.dark,
+
+    background: Colors.black12),
+        iconTheme: IconThemeData(color: Colors.white),
+
 
   textTheme: TextTheme(
+        displayMedium:TextStyle(fontSize: getResponsiveFontSize(context, fontSize: 20), color: Colors.white) ,
+
      titleMedium:TextStyle(fontSize: getResponsiveFontSize(context, fontSize: 30), color: Colors.white) , 
      titleSmall: TextStyle(fontSize: getResponsiveFontSize(context, fontSize: 25),color: Colors.white),
    
+
+      bodyMedium: TextStyle(fontSize: getResponsiveFontSize(context, fontSize: 18), color: Colors.white),
+     bodySmall: TextStyle(fontSize: getResponsiveFontSize(context, fontSize: 14), color: Colors.black),
     // displayMedium: TextStyle(fontSize: 30, color: Colors.black,), 
     // bodyLarge: TextStyle(fontSize: 32, fontWeight: FontWeight.bold, color: Colors.black),
     // bodyMedium: TextStyle(fontSize: 20.0, fontStyle: FontStyle.italic, color: Colors.black87),

@@ -1,39 +1,50 @@
 import 'package:flutter/material.dart';
+import 'package:one_plus/core/utils/global/themes/appColor/appColorLight.dart';
+
+import '../../../../../../core/utils/SizieConfig.dart';
 
 class CustomButton extends StatelessWidget {
-  final double width;
-  final double height;
-  final Color background;
+  final double? width;
+  final double? height;
+  final Color? background;
   final VoidCallback function;
   final String text;
 
   const CustomButton({
     Key? key,
-   required this.width ,
-    required this.height,
-    this.background = Colors.deepOrange,
+     this.width,
+     this.height,
+    this.background  ,
     required this.function,
     required this.text,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+       SizeConfig.init(context);
+
+    double buttonWidth = SizeConfig.width * 0.3;
+    double buttonHeight = SizeConfig.height * 0.3;
+
+     buttonWidth = buttonWidth.clamp(60.0, 150.0);
+     buttonHeight = buttonHeight.clamp(20.0, 40.0);
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(25),
-        color: background,
+        color: background ?? AppColorsLight.customButtonMaincolor,
       ),
-      width: width,
-      height: height,
+      width: width ?? buttonWidth,
+      height: height ?? buttonHeight,
       child: MaterialButton(
         onPressed: function,
         child: Text(
           text,
-          style: TextStyle(
-            color: Color.fromARGB(255, 231, 224, 224),
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          ),
+          style: Theme.of(context).textTheme.displayMedium,
+          // TextStyle(
+          //   color: Color.fromARGB(255, 231, 224, 224),
+          //   fontSize: 20,
+          //   fontWeight: FontWeight.bold,
+          // ),
         ),
       ),
     );

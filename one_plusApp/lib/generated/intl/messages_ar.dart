@@ -22,16 +22,35 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "confirm_password_hint":
+            MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور"),
+        "confirm_password_label":
+            MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور:"),
+        "email_hint":
+            MessageLookupByLibrary.simpleMessage("أدخل البريد الإلكتروني"),
+        "email_label":
+            MessageLookupByLibrary.simpleMessage("البريد الإلكتروني:"),
+        "have_account":
+            MessageLookupByLibrary.simpleMessage(" هل لديك حساب ؟  "),
+        "login": MessageLookupByLibrary.simpleMessage("دخول"),
+        "name_hint": MessageLookupByLibrary.simpleMessage("أدخل اسمك"),
+        "name_label": MessageLookupByLibrary.simpleMessage("الاسم:"),
+        "password_hint":
+            MessageLookupByLibrary.simpleMessage("أدخل كلمة المرور"),
+        "password_label": MessageLookupByLibrary.simpleMessage("كلمة المرور:"),
+        "sign_up": MessageLookupByLibrary.simpleMessage("تسجيل"),
         "subtitle1": MessageLookupByLibrary.simpleMessage(
             "استكشف مجموعتنا الواسعة من أحدث الأجهزة الإلكترونية."),
         "subtitle2": MessageLookupByLibrary.simpleMessage(
-            "تجربة خيارات دفع سهلة وآمنة لمشترياتك."),
+            "تمتع بخيارات دفع آمنة وسهلة لمشترياتك."),
         "subtitle3": MessageLookupByLibrary.simpleMessage(
-            "ابقَ محدثًا بتتبع الطلبات في الوقت الحقيقي."),
+            "ابقَ مطلعًا على تتبع طلباتك في الوقت الفعلي."),
         "title1": MessageLookupByLibrary.simpleMessage(
             "مجموعة واسعة من الإلكترونيات"),
         "title2": MessageLookupByLibrary.simpleMessage("دفع آمن وسهل"),
-        "title3":
-            MessageLookupByLibrary.simpleMessage("تتبع الطلب في الوقت الحقيقي")
+        "title3": MessageLookupByLibrary.simpleMessage(
+            "تتبع الطلبات في الوقت الحقيقي"),
+        "uploadimageCirclAvatar":
+            MessageLookupByLibrary.simpleMessage("تحميل صورة")
       };
 }

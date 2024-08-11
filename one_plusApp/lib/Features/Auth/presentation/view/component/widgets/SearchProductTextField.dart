@@ -1,5 +1,5 @@
-
 import 'package:flutter/material.dart';
+import 'package:one_plus/core/utils/global/themes/appColor/appColorLight.dart';
 
 class SearchProductTextField extends StatelessWidget {
   const SearchProductTextField({
@@ -8,31 +8,36 @@ class SearchProductTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return Row(textDirection: TextDirection.ltr,
       children: [
-        SizedBox(
-          width: 350,
-          height: 35,
+        Expanded( 
           child: TextFormField(
-            decoration: InputDecoration(
-              hintText: "search product here ...",
+            decoration: InputDecoration(filled: true,
+              fillColor:AppColorsLight.textFormSearchProductFilledcolor ,
+              hintText: "Search product here...",
               hintStyle: Theme.of(context).textTheme.bodySmall,
-              fillColor: Colors.white,
-              filled: true,
+              contentPadding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
               border: OutlineInputBorder(
-                  borderRadius: BorderRadius.horizontal(
-                      left: Radius.circular(20))),
+                borderRadius: BorderRadius.horizontal(
+                  left: Radius.circular(20),
+                ),
+              ),
             ),
+            textAlignVertical: TextAlignVertical.center,
           ),
         ),
-        Container(
+        Container(height: 50,
           decoration: BoxDecoration(
-              color: Colors.deepOrange,
-              borderRadius: BorderRadius.horizontal(
-                  right: Radius.circular(20))),
-          height: 35,
-          child:
-              IconButton(onPressed: () {}, icon: Icon(Icons.search)),
+            color: AppColorsLight.customButtonMaincolor,
+            borderRadius: BorderRadius.horizontal(
+              right: Radius.circular(20),
+            ),
+          ),
+       
+          child:IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.search),
+          ),
         ),
       ],
     );

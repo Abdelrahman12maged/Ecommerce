@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:one_plus/core/utils/global/themes/appColor/appColorLight.dart';
 
 // class CustomTextField extends StatelessWidget {
 //   const CustomTextField({super.key, required this.hint});
@@ -57,6 +58,7 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      style: TextStyle(color:AppColorsLight.inputTextFormcolor ),
       strutStyle: style,
       obscureText: obscure,
       onChanged: onChanged,
@@ -68,7 +70,7 @@ class CustomTextField extends StatelessWidget {
           InputDecoration(
             hintText: hint,
             hintStyle: Theme.of(context).textTheme.bodySmall,
-            fillColor: Color.fromARGB(255, 238, 238, 238),
+            fillColor:AppColorsLight.textFormFieldFilledColor ,
             filled: true,
             border: InputBorder.none,
             suffixIcon: suffix,

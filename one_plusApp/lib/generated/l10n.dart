@@ -109,6 +109,126 @@ class S {
       args: [],
     );
   }
+
+  /// `Upload Image`
+  String get uploadimageCirclAvatar {
+    return Intl.message(
+      'Upload Image',
+      name: 'uploadimageCirclAvatar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Name:`
+  String get name_label {
+    return Intl.message(
+      'Name:',
+      name: 'name_label',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your name`
+  String get name_hint {
+    return Intl.message(
+      'Enter your name',
+      name: 'name_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email:`
+  String get email_label {
+    return Intl.message(
+      'Email:',
+      name: 'email_label',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter email`
+  String get email_hint {
+    return Intl.message(
+      'Enter email',
+      name: 'email_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password:`
+  String get password_label {
+    return Intl.message(
+      'Password:',
+      name: 'password_label',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter password`
+  String get password_hint {
+    return Intl.message(
+      'Enter password',
+      name: 'password_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm Password:`
+  String get confirm_password_label {
+    return Intl.message(
+      'Confirm Password:',
+      name: 'confirm_password_label',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm password`
+  String get confirm_password_hint {
+    return Intl.message(
+      'Confirm password',
+      name: 'confirm_password_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `sign up`
+  String get sign_up {
+    return Intl.message(
+      'sign up',
+      name: 'sign_up',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Already have  account ?  `
+  String get have_account {
+    return Intl.message(
+      'Already have  account ?  ',
+      name: 'have_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login`
+  String get login {
+    return Intl.message(
+      'Login',
+      name: 'login',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

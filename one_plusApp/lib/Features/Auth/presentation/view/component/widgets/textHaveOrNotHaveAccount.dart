@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:one_plus/core/utils/global/themes/appColor/appColorLight.dart';
 
 class textHaveOrNotHaveAccount extends StatelessWidget {
   const textHaveOrNotHaveAccount({
@@ -15,7 +16,7 @@ class textHaveOrNotHaveAccount extends StatelessWidget {
       children: [
         Text(text1),
         InkWell(onTap: onTapText2,
-          child: Text(text2)),
+          child: Text(text2,style: TextStyle(color: AppColorsLight.customButtonMaincolor),)),
       ],
     );
   }
