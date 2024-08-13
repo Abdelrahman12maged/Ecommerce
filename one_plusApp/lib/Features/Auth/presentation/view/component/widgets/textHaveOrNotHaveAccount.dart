@@ -14,9 +14,13 @@ class textHaveOrNotHaveAccount extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text(text1),
-        InkWell(onTap: onTapText2,
-          child: Text(text2,style: TextStyle(color: AppColorsLight.customButtonMaincolor),)),
+        
+      Expanded(flex: 0,
+        child: Text(text1)),
+        Expanded(
+          child: InkWell(onTap: onTapText2,
+            child: Text(text2,style: TextStyle(color: AppColorsLight.customButtonMaincolor),)),
+        ),
       ],
     );
   }

@@ -9,7 +9,7 @@ import 'package:device_preview/device_preview.dart';
 void main() {
   runApp(DevicePreview(
       availableLocales: [Locale("ar"), Locale("en")],
-      enabled: false,
+      enabled: true,
       builder: (context) => const MyApp()));
 }
 

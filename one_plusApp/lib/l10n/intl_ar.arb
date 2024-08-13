@@ -20,7 +20,11 @@
         "confirm_password_hint": "تأكيد كلمة المرور",
         "sign_up":"تسجيل",
              "have_account":" هل لديك حساب ؟  ",
-     "login":"دخول"
+             "have_not_account":" ليس لديك حساب الان ؟  ",
+
+     "login":"دخول",
+     "serchproducthere":"ابحث عن منتج هنا ..."
+
 
     
     

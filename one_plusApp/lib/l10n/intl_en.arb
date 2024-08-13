@@ -24,7 +24,9 @@
     "confirm_password_hint": "Confirm password",
      "sign_up":"sign up",
      "have_account":"Already have  account ?  ",
-     "login":"Login"
+     "have_not_account":"if you have not account ?  ",
+     "login":"Login",
+     "serchproducthere":"Search product here..."
 
 
 

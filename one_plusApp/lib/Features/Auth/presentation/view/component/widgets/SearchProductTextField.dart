@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:one_plus/core/utils/global/themes/appColor/appColorLight.dart';
 
+import '../../../../../../generated/l10n.dart';
+
 class SearchProductTextField extends StatelessWidget {
   const SearchProductTextField({
     super.key,
@@ -14,7 +16,7 @@ class SearchProductTextField extends StatelessWidget {
           child: TextFormField(
             decoration: InputDecoration(filled: true,
               fillColor:AppColorsLight.textFormSearchProductFilledcolor ,
-              hintText: "Search product here...",
+              hintText:S.of(context).serchproducthere ,
               hintStyle: Theme.of(context).textTheme.bodySmall,
               contentPadding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
               border: OutlineInputBorder(

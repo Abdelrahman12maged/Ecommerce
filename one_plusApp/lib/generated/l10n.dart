@@ -220,11 +220,31 @@ class S {
     );
   }
 
+  /// `if you have not account ?  `
+  String get have_not_account {
+    return Intl.message(
+      'if you have not account ?  ',
+      name: 'have_not_account',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Login`
   String get login {
     return Intl.message(
       'Login',
       name: 'login',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search product here...`
+  String get serchproducthere {
+    return Intl.message(
+      'Search product here...',
+      name: 'serchproducthere',
       desc: '',
       args: [],
     );

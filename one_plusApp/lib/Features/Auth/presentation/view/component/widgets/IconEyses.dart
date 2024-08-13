@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:one_plus/core/utils/global/themes/appColor/appColorLight.dart';
 
 class IconEyes extends StatelessWidget {
   const IconEyes({
@@ -11,7 +12,7 @@ class IconEyes extends StatelessWidget {
         onTap: function,
         child: Icon(
           Icons.remove_red_eye,
-          color: Colors.black,
+         color:AppColorsLight.icon_eyesColor,
         ));
   }
 }

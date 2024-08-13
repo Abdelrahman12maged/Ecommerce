@@ -24,27 +24,29 @@ class CustomButton extends StatelessWidget {
        SizeConfig.init(context);
 
     double buttonWidth = SizeConfig.width * 0.3;
-    double buttonHeight = SizeConfig.height * 0.3;
+    //double buttonHeight = SizeConfig.height * 0.3;
 
-     buttonWidth = buttonWidth.clamp(60.0, 150.0);
-     buttonHeight = buttonHeight.clamp(20.0, 40.0);
+     buttonWidth = buttonWidth.clamp(20.0, 120.0);
+   //  buttonHeight = buttonHeight.clamp(20.0, 35.0);
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(25),
         color: background ?? AppColorsLight.customButtonMaincolor,
       ),
       width: width ?? buttonWidth,
-      height: height ?? buttonHeight,
+      height: height ,
       child: MaterialButton(
         onPressed: function,
-        child: Text(
-          text,
-          style: Theme.of(context).textTheme.displayMedium,
-          // TextStyle(
-          //   color: Color.fromARGB(255, 231, 224, 224),
-          //   fontSize: 20,
-          //   fontWeight: FontWeight.bold,
-          // ),
+        child: Center(
+          child: Text(
+            text,
+            style: Theme.of(context).textTheme.displayMedium,
+            // TextStyle(
+            //   color: Color.fromARGB(255, 231, 224, 224),
+            //   fontSize: 20,
+            //   fontWeight: FontWeight.bold,
+            // ),
+          ),
         ),
       ),
     );

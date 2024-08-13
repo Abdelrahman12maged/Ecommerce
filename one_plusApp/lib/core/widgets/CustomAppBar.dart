@@ -4,12 +4,13 @@ import 'package:one_plus/Features/Auth/presentation/view/component/widgets/custo
 import 'package:one_plus/core/utils/SizieConfig.dart';
 
 import '../../Features/Auth/presentation/view/component/widgets/SearchProductTextField.dart';
+import '../../generated/l10n.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const CustomAppBar({
-    super.key,
-  });
-
+  const CustomAppBar(
+      {super.key, required this.onTapButton, required this.textButton});
+  final VoidCallback onTapButton;
+  final String textButton;
   @override
   Widget build(BuildContext context) {
     SizeConfig.init(context);
@@ -20,24 +21,29 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     buttonWidth = buttonWidth.clamp(60.0, 100.0);
     buttonHeight = buttonHeight.clamp(20.0, 32.0);
     return AppBar(
+      leading: Container(),
       actions: [
+      
         Expanded(
           child: Padding(
-            padding: const EdgeInsets.all(5),
+            padding: const EdgeInsets.symmetric(horizontal: 10),
             child: Row(
               children: [
-                Text(
-                  "ONE PLUS",
-                  style: TextStyle(color: Colors.black),
+                Expanded(
+                  child: Text(
+                    "ONE 1+ PLUS",
+                    style: Theme.of(context).textTheme.bodyMedium,
+                  ),
                 ),
-                Expanded(child: SizedBox()),
-                Expanded(flex: 2, child: SearchProductTextField()),
-                Expanded(child: SizedBox()),
+              SizeConfig.width >= SizeConfig.tablet?    Expanded(child: SizedBox()):Container(),
+                SizeConfig.width >= SizeConfig.tablet
+                    ? Expanded(flex: 2, child: SearchProductTextField())
+                    : Container(),
+              SizeConfig.width >= SizeConfig.tablet?    Expanded(child: SizedBox()):Container(),
                 CustomButton(
-                  width: buttonWidth,
-                  height: buttonHeight,
-                  function: () {},
-                  text: "Login",
+                  height: 40,
+                  function: onTapButton,
+                  text: textButton,
                 ),
               ],
             ),

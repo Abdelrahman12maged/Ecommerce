@@ -17,8 +17,10 @@ class CustomBackGroundContainer extends StatelessWidget {
 
     return Container(
       width: containerWidth,
+      decoration: BoxDecoration(color: Theme.of(context).colorScheme.background,
+        borderRadius: BorderRadius.circular(20)),
       //   height: containerHeight,
-      color: Theme.of(context).colorScheme.background,
+      
        //isDarkMode ?Colors.black:Colors.white
       
      child:child ,

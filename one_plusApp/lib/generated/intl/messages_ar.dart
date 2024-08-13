@@ -32,12 +32,16 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("البريد الإلكتروني:"),
         "have_account":
             MessageLookupByLibrary.simpleMessage(" هل لديك حساب ؟  "),
+        "have_not_account":
+            MessageLookupByLibrary.simpleMessage(" ليس لديك حساب الان ؟  "),
         "login": MessageLookupByLibrary.simpleMessage("دخول"),
         "name_hint": MessageLookupByLibrary.simpleMessage("أدخل اسمك"),
         "name_label": MessageLookupByLibrary.simpleMessage("الاسم:"),
         "password_hint":
             MessageLookupByLibrary.simpleMessage("أدخل كلمة المرور"),
         "password_label": MessageLookupByLibrary.simpleMessage("كلمة المرور:"),
+        "serchproducthere":
+            MessageLookupByLibrary.simpleMessage("ابحث عن منتج هنا ..."),
         "sign_up": MessageLookupByLibrary.simpleMessage("تسجيل"),
         "subtitle1": MessageLookupByLibrary.simpleMessage(
             "استكشف مجموعتنا الواسعة من أحدث الأجهزة الإلكترونية."),

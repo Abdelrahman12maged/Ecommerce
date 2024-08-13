@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:one_plus/core/utils/appRouter.dart';
+import 'package:one_plus/core/utils/global/themes/appColor/appColorLight.dart';
 
 class FloatingButton extends StatelessWidget {
   FloatingButton(
@@ -21,7 +22,8 @@ class FloatingButton extends StatelessWidget {
       width:buttonSize,height:buttonSize,
       child: FloatingActionButton(
               child:  Icon(size: iconSize,
-          Icons.arrow_forward_ios),
+          Icons.arrow_forward_ios,color: AppColorsLight.iconInFloatingButton,
+          ),
         onPressed: () {
           if (islast) {
           //  print("last");

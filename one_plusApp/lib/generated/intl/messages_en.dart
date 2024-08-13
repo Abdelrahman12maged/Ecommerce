@@ -30,11 +30,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "email_label": MessageLookupByLibrary.simpleMessage("Email:"),
         "have_account":
             MessageLookupByLibrary.simpleMessage("Already have  account ?  "),
+        "have_not_account":
+            MessageLookupByLibrary.simpleMessage("if you have not account ?  "),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "name_hint": MessageLookupByLibrary.simpleMessage("Enter your name"),
         "name_label": MessageLookupByLibrary.simpleMessage("Name:"),
         "password_hint": MessageLookupByLibrary.simpleMessage("Enter password"),
         "password_label": MessageLookupByLibrary.simpleMessage("Password:"),
+        "serchproducthere":
+            MessageLookupByLibrary.simpleMessage("Search product here..."),
         "sign_up": MessageLookupByLibrary.simpleMessage("sign up"),
         "subtitle1": MessageLookupByLibrary.simpleMessage(
             "Explore our extensive collection of the latest electronic devices."),
