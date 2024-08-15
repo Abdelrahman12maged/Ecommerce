@@ -50,19 +50,16 @@ class SignUpLayout extends StatelessWidget {
                         child: CustomUploadImageAvatar()),
                     SizedBox(height: 15),
                     SignUPTextFormFields(
-                      nameController: context.read<SignUpCubit>().signUpName,
-                      emailController: context.read<SignUpCubit>().signUpEmail,
-                      passwordController: context.read<SignUpCubit>().signUpPassword,
-                      confirmPasswordController: context.read<SignUpCubit>().confirmPassword,
+                      // nameController: context.read<SignUpCubit>().signUpName,
+                      // emailController: context.read<SignUpCubit>().signUpEmail,
+                      // passwordController: context.read<SignUpCubit>().signUpPassword,
+                      // confirmPasswordController: context.read<SignUpCubit>().confirmPassword,
                     ),
                     SizedBox(height: 25),
                     Center(
                       child: BlocSignUpButton(
-                          formKey: context.read<SignUpCubit>().signUpFormKey,
-                          nameController: context.read<SignUpCubit>().signUpName,
-                          emailController: context.read<SignUpCubit>().signUpEmail,
-                          passwordController: context.read<SignUpCubit>().signUpPassword,
-                          str: str),
+                       
+                          ),
                     ),
                     SizedBox(height: 25),
                     textHaveOrNotHaveAccount(
