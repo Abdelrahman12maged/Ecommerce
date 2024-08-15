@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:one_plus/Features/Auth/presentation/manager/cubit/user_cubit.dart';
 import 'package:one_plus/Features/Auth/presentation/view/component/SignUpLayoutsWidgets/SignUpLayout.dart';
 import 'package:one_plus/core/utils/SizieConfig.dart';
 
@@ -13,23 +15,25 @@ class SignUpView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: CustomAppBar(
-        textButton: S.of(context).login,
-        onTapButton: () {
-          GoRouter.of(context).push(AppRouter.kLoginView);
-        },
-      ),
-      body: AdaptiveLayout(
-        desktopLayout: (context) => SignUpLayout(
-            containerWidth: SizeConfig.width * 0.3,
-            paddingcontainerVertical: 20),
-        tabletLayout: (context) => SignUpLayout(
-            containerWidth: SizeConfig.width * 0.4,
-            paddingcontainerVertical: 60),
-        mobileLayout: (context) => SignUpLayout(
-            containerWidth: SizeConfig.width * 0.6,
-            paddingcontainerVertical: 60),
+    return BlocProvider(create: (context) => SignUpCubit(),
+      child: Scaffold(
+        appBar: CustomAppBar(
+          textButton: S.of(context).login,
+          onTapButton: () {
+            GoRouter.of(context).push(AppRouter.kLoginView);
+          },
+        ),
+        body: AdaptiveLayout(
+          desktopLayout: (context) => SignUpLayout(
+              containerWidth: SizeConfig.width * 0.3,
+              paddingcontainerVertical: 20),
+          tabletLayout: (context) => SignUpLayout(
+              containerWidth: SizeConfig.width * 0.4,
+              paddingcontainerVertical: 60),
+          mobileLayout: (context) => SignUpLayout(
+              containerWidth: SizeConfig.width * 0.6,
+              paddingcontainerVertical: 60),
+        ),
       ),
     );
   }

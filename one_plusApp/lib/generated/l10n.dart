@@ -120,10 +120,10 @@ class S {
     );
   }
 
-  /// `Name:`
+  /// `Name`
   String get name_label {
     return Intl.message(
-      'Name:',
+      'Name',
       name: 'name_label',
       desc: '',
       args: [],
@@ -140,61 +140,121 @@ class S {
     );
   }
 
-  /// `Email:`
+  /// `Please enter your name`
+  String get name_validation_error {
+    return Intl.message(
+      'Please enter your name',
+      name: 'name_validation_error',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email`
   String get email_label {
     return Intl.message(
-      'Email:',
+      'Email',
       name: 'email_label',
       desc: '',
       args: [],
     );
   }
 
-  /// `Enter email`
+  /// `Enter your email`
   String get email_hint {
     return Intl.message(
-      'Enter email',
+      'Enter your email',
       name: 'email_hint',
       desc: '',
       args: [],
     );
   }
 
-  /// `Password:`
+  /// `Please enter your email`
+  String get email_validation_error {
+    return Intl.message(
+      'Please enter your email',
+      name: 'email_validation_error',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter a valid email`
+  String get email_format_error {
+    return Intl.message(
+      'Please enter a valid email',
+      name: 'email_format_error',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
   String get password_label {
     return Intl.message(
-      'Password:',
+      'Password',
       name: 'password_label',
       desc: '',
       args: [],
     );
   }
 
-  /// `Enter password`
+  /// `Enter your password`
   String get password_hint {
     return Intl.message(
-      'Enter password',
+      'Enter your password',
       name: 'password_hint',
       desc: '',
       args: [],
     );
   }
 
-  /// `Confirm Password:`
+  /// `Please enter your password`
+  String get password_validation_error {
+    return Intl.message(
+      'Please enter your password',
+      name: 'password_validation_error',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm Password`
   String get confirm_password_label {
     return Intl.message(
-      'Confirm Password:',
+      'Confirm Password',
       name: 'confirm_password_label',
       desc: '',
       args: [],
     );
   }
 
-  /// `Confirm password`
+  /// `Confirm your password`
   String get confirm_password_hint {
     return Intl.message(
-      'Confirm password',
+      'Confirm your password',
       name: 'confirm_password_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please confirm your password`
+  String get confirm_password_validation_error {
+    return Intl.message(
+      'Please confirm your password',
+      name: 'confirm_password_validation_error',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Passwords do not match`
+  String get confirm_password_mismatch {
+    return Intl.message(
+      'Passwords do not match',
+      name: 'confirm_password_mismatch',
       desc: '',
       args: [],
     );

@@ -44,7 +44,8 @@ class SignInLayout extends StatelessWidget {
                       height: 25,
                     ),
                     Center(
-                      child: CustomButton(height: 40,
+                      child: CustomButton(
+                        height: 40,
                         function: () {}, text: str.login),
                     ),
                     SizedBox(

@@ -14,14 +14,25 @@
     "uploadimageCirclAvatar":"Upload Image",
 
 
-    "name_label": "Name:",
-    "name_hint": "Enter your name",
-    "email_label": "Email:",
-    "email_hint": "Enter email",
-    "password_label": "Password:",
-    "password_hint": "Enter password",
-    "confirm_password_label": "Confirm Password:",
-    "confirm_password_hint": "Confirm password",
+
+        "name_label": "Name",
+        "name_hint": "Enter your name",
+        "name_validation_error": "Please enter your name",
+        "email_label": "Email",
+        "email_hint": "Enter your email",
+        "email_validation_error": "Please enter your email",
+        "email_format_error": "Please enter a valid email",
+        "password_label": "Password",
+        "password_hint": "Enter your password",
+        "password_validation_error": "Please enter your password",
+        "confirm_password_label": "Confirm Password",
+        "confirm_password_hint": "Confirm your password",
+        "confirm_password_validation_error": "Please confirm your password",
+        "confirm_password_mismatch": "Passwords do not match",
+      
+
+
+
      "sign_up":"sign up",
      "have_account":"Already have  account ?  ",
      "have_not_account":"if you have not account ?  ",

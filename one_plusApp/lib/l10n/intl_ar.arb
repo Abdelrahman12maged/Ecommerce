@@ -9,15 +9,24 @@
         "subtitle3": "ابقَ مطلعًا على تتبع طلباتك في الوقت الفعلي.",
     
         "uploadimageCirclAvatar": "تحميل صورة",
-    
-        "name_label": "الاسم:",
-        "name_hint": "أدخل اسمك",
-        "email_label": "البريد الإلكتروني:",
-        "email_hint": "أدخل البريد الإلكتروني",
-        "password_label": "كلمة المرور:",
-        "password_hint": "أدخل كلمة المرور",
-        "confirm_password_label": "تأكيد كلمة المرور:",
-        "confirm_password_hint": "تأكيد كلمة المرور",
+        
+                "name_label": "الاسم",
+                "name_hint": "أدخل اسمك",
+                "name_validation_error": "الرجاء إدخال اسمك",
+                "email_label": "البريد الإلكتروني",
+                "email_hint": "أدخل بريدك الإلكتروني",
+                "email_validation_error": "الرجاء إدخال بريدك الإلكتروني",
+                "email_format_error": "الرجاء إدخال بريد إلكتروني صحيح",
+                "password_label": "كلمة المرور",
+                "password_hint": "أدخل كلمة المرور",
+                "password_validation_error": "الرجاء إدخال كلمة المرور",
+                "confirm_password_label": "تأكيد كلمة المرور",
+                "confirm_password_hint": "أكد كلمة المرور",
+                "confirm_password_validation_error": "الرجاء تأكيد كلمة المرور",
+                "confirm_password_mismatch": "كلمات المرور غير متطابقة",
+              
+
+
         "sign_up":"تسجيل",
              "have_account":" هل لديك حساب ؟  ",
              "have_not_account":" ليس لديك حساب الان ؟  ",

@@ -23,23 +23,35 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "confirm_password_hint":
-            MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور"),
+            MessageLookupByLibrary.simpleMessage("أكد كلمة المرور"),
         "confirm_password_label":
-            MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور:"),
+            MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور"),
+        "confirm_password_mismatch":
+            MessageLookupByLibrary.simpleMessage("كلمات المرور غير متطابقة"),
+        "confirm_password_validation_error":
+            MessageLookupByLibrary.simpleMessage("الرجاء تأكيد كلمة المرور"),
+        "email_format_error": MessageLookupByLibrary.simpleMessage(
+            "الرجاء إدخال بريد إلكتروني صحيح"),
         "email_hint":
-            MessageLookupByLibrary.simpleMessage("أدخل البريد الإلكتروني"),
+            MessageLookupByLibrary.simpleMessage("أدخل بريدك الإلكتروني"),
         "email_label":
-            MessageLookupByLibrary.simpleMessage("البريد الإلكتروني:"),
+            MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+        "email_validation_error": MessageLookupByLibrary.simpleMessage(
+            "الرجاء إدخال بريدك الإلكتروني"),
         "have_account":
             MessageLookupByLibrary.simpleMessage(" هل لديك حساب ؟  "),
         "have_not_account":
             MessageLookupByLibrary.simpleMessage(" ليس لديك حساب الان ؟  "),
         "login": MessageLookupByLibrary.simpleMessage("دخول"),
         "name_hint": MessageLookupByLibrary.simpleMessage("أدخل اسمك"),
-        "name_label": MessageLookupByLibrary.simpleMessage("الاسم:"),
+        "name_label": MessageLookupByLibrary.simpleMessage("الاسم"),
+        "name_validation_error":
+            MessageLookupByLibrary.simpleMessage("الرجاء إدخال اسمك"),
         "password_hint":
             MessageLookupByLibrary.simpleMessage("أدخل كلمة المرور"),
-        "password_label": MessageLookupByLibrary.simpleMessage("كلمة المرور:"),
+        "password_label": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "password_validation_error":
+            MessageLookupByLibrary.simpleMessage("الرجاء إدخال كلمة المرور"),
         "serchproducthere":
             MessageLookupByLibrary.simpleMessage("ابحث عن منتج هنا ..."),
         "sign_up": MessageLookupByLibrary.simpleMessage("تسجيل"),

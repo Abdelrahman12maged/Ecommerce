@@ -41,18 +41,19 @@ try{
     const userData = new userModel(payload)
     const saveUser = await userData.save()
 
-    res.status(201).json({
-        data : saveUser,
+    res.status(200).json({
+        user : saveUser,
         success : true,
         error : false,
         message : "User created Successfully!"
     })
-   
+       
 }catch(err){
- res.json({
+ res.status(401).json({
   message:err.message || err,
   error:true,
-  sucess:false
+  success:false,
+  status:401
 
  })
 

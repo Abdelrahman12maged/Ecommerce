@@ -36,10 +36,11 @@ class CustomTextField extends StatelessWidget {
   final StrutStyle? style;
   final VoidCallback? onTap;
   final VoidCallback? onPressedIcon;
+  FocusNode? focusNode;
   final Function(String)? onChanged;
   final String? Function(String?)? validator;
 
-  const CustomTextField({
+   CustomTextField({
     Key? key,
     this.controller,
     this.type,
@@ -53,11 +54,13 @@ class CustomTextField extends StatelessWidget {
     this.onPressedIcon,
     this.onChanged,
     this.validator,
+    this.focusNode,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      focusNode:focusNode ,
       style: TextStyle(color:AppColorsLight.inputTextFormcolor ),
       strutStyle: style,
       obscureText: obscure,

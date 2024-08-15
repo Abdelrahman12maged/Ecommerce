@@ -23,20 +23,34 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "confirm_password_hint":
-            MessageLookupByLibrary.simpleMessage("Confirm password"),
+            MessageLookupByLibrary.simpleMessage("Confirm your password"),
         "confirm_password_label":
-            MessageLookupByLibrary.simpleMessage("Confirm Password:"),
-        "email_hint": MessageLookupByLibrary.simpleMessage("Enter email"),
-        "email_label": MessageLookupByLibrary.simpleMessage("Email:"),
+            MessageLookupByLibrary.simpleMessage("Confirm Password"),
+        "confirm_password_mismatch":
+            MessageLookupByLibrary.simpleMessage("Passwords do not match"),
+        "confirm_password_validation_error":
+            MessageLookupByLibrary.simpleMessage(
+                "Please confirm your password"),
+        "email_format_error":
+            MessageLookupByLibrary.simpleMessage("Please enter a valid email"),
+        "email_hint": MessageLookupByLibrary.simpleMessage("Enter your email"),
+        "email_label": MessageLookupByLibrary.simpleMessage("Email"),
+        "email_validation_error":
+            MessageLookupByLibrary.simpleMessage("Please enter your email"),
         "have_account":
             MessageLookupByLibrary.simpleMessage("Already have  account ?  "),
         "have_not_account":
             MessageLookupByLibrary.simpleMessage("if you have not account ?  "),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "name_hint": MessageLookupByLibrary.simpleMessage("Enter your name"),
-        "name_label": MessageLookupByLibrary.simpleMessage("Name:"),
-        "password_hint": MessageLookupByLibrary.simpleMessage("Enter password"),
-        "password_label": MessageLookupByLibrary.simpleMessage("Password:"),
+        "name_label": MessageLookupByLibrary.simpleMessage("Name"),
+        "name_validation_error":
+            MessageLookupByLibrary.simpleMessage("Please enter your name"),
+        "password_hint":
+            MessageLookupByLibrary.simpleMessage("Enter your password"),
+        "password_label": MessageLookupByLibrary.simpleMessage("Password"),
+        "password_validation_error":
+            MessageLookupByLibrary.simpleMessage("Please enter your password"),
         "serchproducthere":
             MessageLookupByLibrary.simpleMessage("Search product here..."),
         "sign_up": MessageLookupByLibrary.simpleMessage("sign up"),
