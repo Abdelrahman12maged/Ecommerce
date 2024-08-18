@@ -14,6 +14,7 @@ class AppColorsLight {
   static var  customButtonMaincolor = Colors.red[400];
     static const inputTextFormcolor = Colors.black;
     static const icon_eyesColor = Colors.black;
+    static const errrovalidatortextfieldColor = Colors.white;
 
     
 

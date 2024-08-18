@@ -7,23 +7,13 @@ import '../../../../../../core/utils/global/Function/Validator.dart';
 import '../../../../../../generated/l10n.dart';
 
 class SignUPTextFormFields extends StatelessWidget {
-  // final TextEditingController nameController;
-  // final TextEditingController emailController;
-  // final TextEditingController passwordController;
-  // final TextEditingController confirmPasswordController;
-
-  const SignUPTextFormFields({
+  SignUPTextFormFields({
     super.key,
-    // required this.nameController,
-    // required this.emailController,
-    // required this.passwordController,
-    // required this.confirmPasswordController,
   });
 
   @override
   Widget build(BuildContext context) {
-    final controller = context.read<SignUpCubit>();
-   
+    final controller = context.read<UserCubit>();
 
     final str = S.of(context);
 
@@ -48,18 +38,33 @@ class SignUPTextFormFields extends StatelessWidget {
         SizedBox(height: 15),
         Text(str.password_label),
         CustomTextField(
+          //    obscure: controller.isShowPassword,
           controller: controller.signUpPassword,
           hint: str.password_hint,
-          suffix: IconEyes(function: () {}),
+          suffix: IconEyes(icon: Icons.remove_red_eye, onTapIcon: () {}),
           validator: (value) =>
               Validator.validatePassword(value, str.password_validation_error),
         ),
         SizedBox(height: 20),
         Text(str.confirm_password_label),
         CustomTextField(
+          //  obscure: controller.isShowPassword,
           controller: controller.confirmPassword,
           hint: str.confirm_password_hint,
-          suffix: IconEyes(function: () {}),
+          suffix: IconEyes(
+              icon: Icons.remove_red_eye,
+              onTapIcon: () {
+                // controller.showpasswtoggle();
+                // if (isShowPassword == true) {
+                //   setState(() {
+                //     isShowPassword = false;
+                //   });
+                // } else {
+                //   setState(() {
+                //     isShowPassword = true;
+                //   });
+                // }
+              }),
           validator: (value) => Validator.validateConfirmPassword(
               value,
               controller.signUpPassword.text,

@@ -13,28 +13,27 @@ class SignInTextFormFields extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final str = S.of(context);
-   // final themdata=Theme.of(context);
+    // final themdata=Theme.of(context);
 
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-       
         Text(str.email_label),
         CustomTextField(hint: str.email_hint),
         SizedBox(
           height: 15,
         ),
-        Text(str.password_label ),
+        Text(str.password_label),
         CustomTextField(
             hint: str.password_hint,
             suffix: IconEyes(
-              function: () {},
+              icon: Icons.remove_red_eye,
+              onTapIcon: () {},
             )),
         SizedBox(
           height: 20,
         ),
-     
       ],
     );
   }

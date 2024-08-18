@@ -3,15 +3,16 @@ import 'package:one_plus/core/utils/global/themes/appColor/appColorLight.dart';
 
 class IconEyes extends StatelessWidget {
   const IconEyes({
-    super.key,required this.function
+    super.key,required this.onTapIcon, required this.icon
   });
-  final VoidCallback function;
+  final VoidCallback onTapIcon;
+  final IconData icon;
   @override
   Widget build(BuildContext context) {
     return InkWell(
-        onTap: function,
+        onTap: onTapIcon,
         child: Icon(
-          Icons.remove_red_eye,
+         icon,
          color:AppColorsLight.icon_eyesColor,
         ));
   }

@@ -70,7 +70,8 @@ class CustomTextField extends StatelessWidget {
       keyboardType: type,
       validator: validator,
       decoration: decoration ??
-          InputDecoration(
+          InputDecoration(errorStyle: TextStyle(fontSize: 13,
+            color: AppColorsLight.customButtonMaincolor),
             hintText: hint,
             hintStyle: Theme.of(context).textTheme.bodySmall,
             fillColor:AppColorsLight.textFormFieldFilledColor ,

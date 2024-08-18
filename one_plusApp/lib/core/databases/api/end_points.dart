@@ -7,6 +7,7 @@ class EndPoints {
     static const port = "8080";
   static const baseurl = "http://localhost:8080/api/";
   static const signUpUrl = "signup";
+  static const signInUrl = "signin";
 
 }
 

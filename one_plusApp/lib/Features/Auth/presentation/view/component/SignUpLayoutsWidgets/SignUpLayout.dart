@@ -21,12 +21,6 @@ class SignUpLayout extends StatelessWidget {
   double containerWidth;
   double paddingcontainerVertical;
 
-  // final formKey = GlobalKey<FormState>();
-  // final _nameController = TextEditingController();
-  // final _emailController = TextEditingController();
-  // final context.read<SignUpCubit>().signUpPassword = TextEditingController();
-  // final _confirmPasswordController = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     final str = S.of(context);
@@ -41,7 +35,7 @@ class SignUpLayout extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.all(30),
               child: Form(
-                key: context.read<SignUpCubit>().signUpFormKey,
+                key: context.read<UserCubit>().signUpFormKey,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -49,17 +43,10 @@ class SignUpLayout extends StatelessWidget {
                         alignment: Alignment.center,
                         child: CustomUploadImageAvatar()),
                     SizedBox(height: 15),
-                    SignUPTextFormFields(
-                      // nameController: context.read<SignUpCubit>().signUpName,
-                      // emailController: context.read<SignUpCubit>().signUpEmail,
-                      // passwordController: context.read<SignUpCubit>().signUpPassword,
-                      // confirmPasswordController: context.read<SignUpCubit>().confirmPassword,
-                    ),
+                    SignUPTextFormFields(),
                     SizedBox(height: 25),
                     Center(
-                      child: BlocSignUpButton(
-                       
-                          ),
+                      child: BlocSignUpButton(),
                     ),
                     SizedBox(height: 25),
                     textHaveOrNotHaveAccount(

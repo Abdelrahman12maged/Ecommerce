@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:one_plus/Features/Auth/data/models/SignInModel.dart';
 import 'package:one_plus/Features/Auth/data/models/userModel.dart';
 
 import 'package:device_preview/device_preview.dart';
@@ -23,23 +24,8 @@ class AuthRemoteData {
 
   AuthRemoteData({required this.apiservice});
 
-  // @override
-  // Future<UserModel> signUp(SingUpParams params) async {
 
-  //   final response = await apiservice.post(
-  //     EndPoints.signUpUrl,
-  //     data: {
-  //       'name': params.name,
-  //       "email": params.email,
-  //       "password": params.password
-  //     },
-  //   );
-  //     final user = UserModel.fromJson(response['user']);
-
-  //     return user;
-
-  // }
-  Future<UserModel> signUp(SingUpParams params) async {
+  Future<UserModel> signUp(UserParams params) async {
     final response = await apiservice.post(
       EndPoints.signUpUrl,
       data: {
@@ -48,40 +34,22 @@ class AuthRemoteData {
         'password': params.password,
       },
     );
- //   print(response);
 
-   // if (response['success'] == true) {
       return UserModel.fromJson(response['user']);
-    // } else {
-    //   throw ServerException(ErrorModel.fromJson(response));
-    // }
+   
+  }
+
+  Future<SignInModel> signIn(UserParams params) async {
+    final response = await apiservice.post(
+      EndPoints.signInUrl,
+      data: {
+      
+        'email': params.email,
+        'password': params.password,
+      },
+    );
+
+       return SignInModel.fromJson(response);
+   
   }
 }
-// class AuthRemoteData {
-//   final ApiConsumer apiService;
-
-//   AuthRemoteData({required this.apiService});
-
-//   Future<UserModel> signUp(SingUpParams params) async {
-//     try {
-//       final response = await apiService.post(
-//         EndPoints.signUpUrl,
-//         data: {
-//           'name': params.name,
-//           "email": params.email,
-//           "password": params.password,
-//         },
-//       );
-
-//       // Assume the response has a 'user' key for the user data
-//       return UserModel.fromJson(response['user']);
-//     } catch (e) {
-//       if (e is DioException) {
-//         throw handleDioException(e);
-//       } else {
-//         print("===========$e");
-//       }
-//       // This should throw the correct custom exception
-//     }
-//   }
-// }

@@ -10,22 +10,13 @@ import '../../../manager/cubit/user_state.dart';
 class BlocSignUpButton extends StatelessWidget {
   const BlocSignUpButton({
     super.key,
-
-    // required this.str, required this.formKey, required this.nameController, required this.emailController, required this.passwordController,
   });
-
-  // final GlobalKey<FormState> formKey;
-  // final TextEditingController nameController;
-  // final TextEditingController emailController;
-  // final TextEditingController passwordController;
-  // final S str;
 
   @override
   Widget build(BuildContext context) {
-    
-    final cubitdata = context.read<SignUpCubit>();
+    final cubitdata = context.read<UserCubit>();
 
-    return BlocConsumer<SignUpCubit, SignUPState>(
+    return BlocConsumer<UserCubit, UserStates>(
       listener: (context, state) {
         if (state is SignUPLoading) {
           print('loading');
@@ -33,8 +24,14 @@ class BlocSignUpButton extends StatelessWidget {
           ScaffoldMessenger.of(context)
               .showSnackBar(SnackBar(content: Text("sucess")));
         } else if (state is SignUPFailure) {
-          ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(content: Text("${state.errMessage['message']}")));
+          print(state.errMessage);
+  
+            ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(content: Text("${state.errMessage}")));
+        
+          // print(state.errMessage['message']);
+          // ScaffoldMessenger.of(context).showSnackBar(
+          //     SnackBar(content: Text("${state.errMessage['message']}")));
         } else {
           print('another state');
         }
@@ -44,9 +41,9 @@ class BlocSignUpButton extends StatelessWidget {
           height: 40,
           function: () {
             if (cubitdata.signUpFormKey.currentState!.validate()) {
-              BlocProvider.of<SignUpCubit>(context).SignUPcubit(SingUpParams(
-                name:cubitdata.signUpName .text,
-                email:cubitdata.signUpEmail.text,
+              BlocProvider.of<UserCubit>(context).SignUp(UserParams(
+                name: cubitdata.signUpName.text,
+                email: cubitdata.signUpEmail.text,
                 password: cubitdata.signUpPassword.text,
               ));
             }

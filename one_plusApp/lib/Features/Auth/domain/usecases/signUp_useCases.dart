@@ -15,7 +15,7 @@ class SignUpUseCase  {
   SignUpUseCase({required  this.baseAuthrepo});
 
   Future<Either<failure, UserEntity>> call(
-      SingUpParams parameters) async {
+      UserParams parameters) async {
     
        return await baseAuthrepo.signUp(parameters);
       
