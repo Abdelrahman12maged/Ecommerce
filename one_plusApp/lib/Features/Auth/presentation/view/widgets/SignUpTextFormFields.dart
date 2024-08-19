@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:one_plus/Features/Auth/presentation/manager/cubit/user_cubit.dart';
-import 'package:one_plus/Features/Auth/presentation/view/component/widgets/IconEyses.dart';
-import 'package:one_plus/Features/Auth/presentation/view/component/widgets/customTextField.dart';
-import '../../../../../../core/utils/global/Function/Validator.dart';
-import '../../../../../../generated/l10n.dart';
+import 'package:one_plus/Features/Auth/presentation/manager/SignUpCubit/signup_cubit.dart';
+import 'package:one_plus/Features/Auth/presentation/view/widgets/IconEyses.dart';
+import 'package:one_plus/Features/Auth/presentation/view/widgets/customTextField.dart';
+import '../../../../../core/utils/global/Function/Validator.dart';
+import '../../../../../generated/l10n.dart';
 
 class SignUPTextFormFields extends StatelessWidget {
   SignUPTextFormFields({
@@ -13,7 +13,7 @@ class SignUPTextFormFields extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = context.read<UserCubit>();
+    final controller = context.read<SignUpCubit>();
 
     final str = S.of(context);
 

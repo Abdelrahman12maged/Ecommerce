@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:one_plus/core/utils/global/themes/appColor/appColorLight.dart';
 
-import '../../../../../../core/utils/SizieConfig.dart';
+import '../../../../../core/utils/SizieConfig.dart';
 
 class CustomButton extends StatelessWidget {
   final double? width;

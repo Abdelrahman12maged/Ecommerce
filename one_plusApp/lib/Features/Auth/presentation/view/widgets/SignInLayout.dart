@@ -1,17 +1,18 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
-import 'package:one_plus/Features/Auth/presentation/view/component/widgets/CustomUploadImageAvatar.dart';
-import 'package:one_plus/Features/Auth/presentation/view/component/widgets/Custombutton.dart';
-import 'package:one_plus/Features/Auth/presentation/view/component/widgets/SignInTextFormFields.dart';
-import 'package:one_plus/Features/Auth/presentation/view/component/widgets/SignUpTextFormFields.dart';
-import 'package:one_plus/Features/Auth/presentation/view/component/widgets/customTextField.dart';
-import 'package:one_plus/Features/Auth/presentation/view/component/widgets/textHaveOrNotHaveAccount.dart';
+import 'package:one_plus/Features/Auth/presentation/view/widgets/CustomUploadImageAvatar.dart';
+import 'package:one_plus/Features/Auth/presentation/view/widgets/Custombutton.dart';
+import 'package:one_plus/Features/Auth/presentation/view/widgets/SignInTextFormFields.dart';
+import 'package:one_plus/Features/Auth/presentation/view/widgets/SignUpTextFormFields.dart';
+import 'package:one_plus/Features/Auth/presentation/view/widgets/bloc_signin_button.dart';
+import 'package:one_plus/Features/Auth/presentation/view/widgets/customTextField.dart';
+import 'package:one_plus/Features/Auth/presentation/view/widgets/textHaveOrNotHaveAccount.dart';
 import 'package:one_plus/core/utils/SizieConfig.dart';
 import 'package:one_plus/core/utils/assetsImages.dart';
 
-import '../../../../../../generated/l10n.dart';
-import '../widgets/CustomBackGroundContainer.dart';
+import '../../../../../generated/l10n.dart';
+import 'CustomBackGroundContainer.dart';
 
 class SignInLayout extends StatelessWidget {
    SignInLayout({super.key,required this.containerWidth,required this.paddingcontainerVertical});
@@ -44,9 +45,7 @@ class SignInLayout extends StatelessWidget {
                       height: 25,
                     ),
                     Center(
-                      child: CustomButton(
-                        height: 40,
-                        function: () {}, text: str.login),
+                      child: BlocSignInButton(),
                     ),
                     SizedBox(
                       height: 25,

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:one_plus/Features/Auth/presentation/view/component/widgets/Custombutton.dart';
-import 'package:one_plus/Features/Auth/presentation/view/component/widgets/customTextField.dart';
+import 'package:one_plus/Features/Auth/presentation/view/widgets/Custombutton.dart';
+import 'package:one_plus/Features/Auth/presentation/view/widgets/customTextField.dart';
 import 'package:one_plus/core/utils/SizieConfig.dart';
 
-import '../../Features/Auth/presentation/view/component/widgets/SearchProductTextField.dart';
+import '../../Features/Auth/presentation/view/widgets/SearchProductTextField.dart';
 import '../../generated/l10n.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {

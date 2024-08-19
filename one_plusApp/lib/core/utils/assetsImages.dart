@@ -1,6 +1,14 @@
 class Assets {
   Assets._();
   
+  /// Assets for imagesBackground
+  /// assets/images/background.jpeg
+  static const String imagesBackground = "assets/images/background.jpeg";
+
+  /// Assets for imagesLogo
+  /// assets/images/logo.svg
+  static const String imagesLogo = "assets/images/logo.svg";
+
   /// Assets for imagesObo2
   /// assets/images/obo2.PNG
   static const String imagesObo2 = "assets/images/obo2.PNG";

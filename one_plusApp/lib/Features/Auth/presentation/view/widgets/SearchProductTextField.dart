@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:one_plus/core/utils/global/themes/appColor/appColorLight.dart';
 
-import '../../../../../../generated/l10n.dart';
+import '../../../../../generated/l10n.dart';
 
 class SearchProductTextField extends StatelessWidget {
   const SearchProductTextField({

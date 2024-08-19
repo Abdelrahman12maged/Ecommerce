@@ -6,12 +6,12 @@ import 'package:one_plus/Features/Auth/data/datasource/remote_data_source.dart';
 import 'package:one_plus/Features/Auth/data/repositry/Auth_ImpRepo.dart';
 import 'package:one_plus/Features/Auth/domain/usecases/signIn_useCases.dart';
 import 'package:one_plus/Features/Auth/domain/usecases/signUp_useCases.dart';
-import 'package:one_plus/Features/Auth/presentation/manager/cubit/user_state.dart';
+import 'package:one_plus/Features/Auth/presentation/manager/SignUpCubit/signup_state.dart';
 import 'package:one_plus/core/databases/api/dio_consumer.dart';
 import 'package:one_plus/core/params/params.dart';
 
-class UserCubit extends Cubit<UserStates> {
-  UserCubit(this.signUpUseCase, this.signInUsecase) : super(UserInitial());
+class SignUpCubit extends Cubit<SignUpStates> {
+  SignUpCubit(this.signUpUseCase) : super(SignUpInitial());
   GlobalKey<FormState> signUpFormKey = GlobalKey();
 
   TextEditingController signUpName = TextEditingController();
@@ -19,17 +19,8 @@ class UserCubit extends Cubit<UserStates> {
   TextEditingController signUpEmail = TextEditingController();
   TextEditingController signUpPassword = TextEditingController();
   TextEditingController confirmPassword = TextEditingController();
-  // bool isShowPassword = true;
-
-  // showpasswtoggle() {
-  //   if (isShowPassword) {
-  //     isShowPassword = false;
-  //   } else {
-  //     isShowPassword = true;
-  //   }
-  // }
+  
   final SignUpUseCase signUpUseCase;
-  final SignInUsecase signInUsecase;
   SignUp(UserParams params) async {
     emit(SignUPLoading());
 
@@ -41,14 +32,5 @@ class UserCubit extends Cubit<UserStates> {
     );
   }
 
-  SignIn(UserParams params) async {
-    emit(SignInLoading());
-
-    final result = await signInUsecase(params);
-
-    result.fold(
-      (failure) => emit(SignInFailure(errMessage: failure.errormessage)),
-      (res) => emit(SignInSuccessfully( response: res)),
-    );
-  }
+ 
 }

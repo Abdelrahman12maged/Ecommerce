@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:one_plus/core/utils/assetsImages.dart';
 
-import '../../../../../../generated/l10n.dart';
+import '../../../../../generated/l10n.dart';
 
 class CustomUploadImageAvatar extends StatelessWidget {
   const CustomUploadImageAvatar({

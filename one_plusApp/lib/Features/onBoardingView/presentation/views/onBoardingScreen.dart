@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:one_plus/Features/Auth/presentation/view/LoginView.dart';
+import 'package:one_plus/Features/Auth/presentation/view/signin_view.dart';
 import 'package:one_plus/Features/Auth/presentation/view/SignUpView.dart';
 import 'package:one_plus/Features/onBoardingView/data/models/onBoardinItemModels.dart';
 import 'package:one_plus/Features/onBoardingView/presentation/views/component/onBoardingMobilLayout.dart';

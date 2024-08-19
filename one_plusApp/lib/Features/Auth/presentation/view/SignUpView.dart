@@ -6,8 +6,9 @@ import 'package:one_plus/Features/Auth/data/datasource/remote_data_source.dart';
 import 'package:one_plus/Features/Auth/data/repositry/Auth_ImpRepo.dart';
 import 'package:one_plus/Features/Auth/domain/usecases/signIn_useCases.dart';
 import 'package:one_plus/Features/Auth/domain/usecases/signUp_useCases.dart';
-import 'package:one_plus/Features/Auth/presentation/manager/cubit/user_cubit.dart';
-import 'package:one_plus/Features/Auth/presentation/view/component/SignUpLayoutsWidgets/SignUpLayout.dart';
+import 'package:one_plus/Features/Auth/presentation/manager/SignUpCubit/signup_cubit.dart';
+import 'package:one_plus/Features/Auth/presentation/view/widgets/SignUpLayout.dart';
+import 'package:one_plus/Features/Auth/presentation/view/widgets/signup_desktop_layout.dart';
 import 'package:one_plus/core/databases/api/dio_consumer.dart';
 import 'package:one_plus/core/utils/SizieConfig.dart';
 
@@ -21,7 +22,13 @@ class SignUpView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(create: (context) => UserCubit(SignUpUseCase(baseAuthrepo:ImpAuthRepo(AuthRemoteDataSource:  AuthRemoteData(apiservice:DioConsumer(dio: Dio())))),SignInUsecase(baseAuthrepo:ImpAuthRepo(AuthRemoteDataSource:  AuthRemoteData(apiservice:DioConsumer(dio: Dio()))))),
+    return BlocProvider(
+      create: (context) => SignUpCubit(
+          SignUpUseCase(
+              baseAuthrepo: ImpAuthRepo(
+                  AuthRemoteDataSource:
+                      AuthRemoteData(apiservice: DioConsumer(dio: Dio()))))
+          ),
       child: Scaffold(
         appBar: CustomAppBar(
           textButton: S.of(context).login,
@@ -30,13 +37,11 @@ class SignUpView extends StatelessWidget {
           },
         ),
         body: AdaptiveLayout(
-          desktopLayout: (context) => SignUpLayout(
-              containerWidth: SizeConfig.width * 0.3,
-              paddingcontainerVertical: 20),
-          tabletLayout: (context) => SignUpLayout(
+          desktopLayout: (context) => SignUpDesktopLayout(),
+          tabletLayout: (context) => SignUpLayout(alignment: Alignment.center,
               containerWidth: SizeConfig.width * 0.4,
               paddingcontainerVertical: 60),
-          mobileLayout: (context) => SignUpLayout(
+          mobileLayout: (context) => SignUpLayout(alignment: Alignment.center,
               containerWidth: SizeConfig.width * 0.6,
               paddingcontainerVertical: 60),
         ),
@@ -44,3 +49,4 @@ class SignUpView extends StatelessWidget {
     );
   }
 }
+
