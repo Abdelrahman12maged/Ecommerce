@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:one_plus/Features/Auth/data/models/userModel.dart';
+import 'package:one_plus/Features/Auth/data/models/user_model.dart';
 
 import '../../../../core/databases/cache/cache_helper.dart';
 import '../../../../core/errors/expentions.dart';

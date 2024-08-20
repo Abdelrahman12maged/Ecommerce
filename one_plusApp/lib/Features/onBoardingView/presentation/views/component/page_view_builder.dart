@@ -1,9 +1,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:one_plus/Features/onBoardingView/data/models/onBoardinItemModels.dart';
-import 'package:one_plus/Features/onBoardingView/presentation/views/component/FloatinActionButton.dart';
+import 'package:one_plus/Features/onBoardingView/presentation/views/component/floatin_action_button.dart';
 import 'package:one_plus/Features/onBoardingView/presentation/views/component/Indicator.dart';
-import 'package:one_plus/Features/onBoardingView/presentation/views/component/onBoardingitems.dart';
+import 'package:one_plus/Features/onBoardingView/presentation/views/component/onboarding_items.dart';
 import 'package:one_plus/core/utils/assetsImages.dart';
 
 import '../../../../../generated/l10n.dart';

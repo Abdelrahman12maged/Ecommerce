@@ -13,12 +13,15 @@ import 'package:one_plus/generated/l10n.dart';
 import 'package:device_preview/device_preview.dart';
 
 import 'Features/Auth/domain/usecases/signUp_useCases.dart';
+import 'core/utils/SizieConfig.dart';
 
 void main() async {
-  runApp(DevicePreview(
+  runApp(
+    DevicePreview(
       availableLocales: [Locale("ar"), Locale("en")],
       enabled: true,
-      builder: (context) => const MyApp()));
+      builder: (context) => const MyApp()),
+      );
 }
 
 class MyApp extends StatelessWidget {
@@ -27,6 +30,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    SizeConfig.init(context);
     return MaterialApp.router(
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,

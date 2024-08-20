@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'package:one_plus/Features/Auth/presentation/view/widgets/Custombutton.dart';
 import 'package:one_plus/core/utils/global/themes/appColor/appColorLight.dart';
 
 import '../../../../../core/params/params.dart';
+import '../../../../../core/utils/appRouter.dart';
 import '../../../../../generated/l10n.dart';
 import '../../manager/SignUpCubit/signup_cubit.dart';
 import '../../manager/SignUpCubit/signup_state.dart';
@@ -20,8 +22,10 @@ class BlocSignUpButton extends StatelessWidget {
     return BlocConsumer<SignUpCubit, SignUpStates>(
       listener: (context, state) {
        if (state is SignUPSuccessfully) {
+         GoRouter.of(context).push(AppRouter.kLoginView);
           ScaffoldMessenger.of(context)
               .showSnackBar(SnackBar(content: Text("sucess")));
+
         } else if (state is SignUPFailure) {
           print(state.errMessage);
 

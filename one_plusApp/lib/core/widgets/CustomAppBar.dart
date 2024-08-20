@@ -13,7 +13,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String textButton;
   @override
   Widget build(BuildContext context) {
-    SizeConfig.init(context);
+    
 
     double buttonWidth = SizeConfig.width * 0.3;
     double buttonHeight = SizeConfig.height * 0.3;

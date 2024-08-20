@@ -22,8 +22,8 @@ class LoginView extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(create: (context) => SignInCubit( SignInUsecase(
               baseAuthrepo: ImpAuthRepo(
-                  AuthRemoteDataSource:
-                      AuthRemoteData(apiservice: DioConsumer(dio: Dio()))))),
+                  baseAuthRemoteDataSource:
+                      AuthRemoteData(apiservice: DioConsumer(dio: Dio())), ))),
       child: Scaffold(
         appBar: CustomAppBar(textButton: S.of(context).sign_up,
           onTapButton: () {
@@ -35,7 +35,7 @@ class LoginView extends StatelessWidget {
               containerWidth: SizeConfig.width * 0.3,
               paddingcontainerVertical: 20),
           tabletLayout: (context) => SignInLayout(
-              containerWidth: SizeConfig.width * 0.4,
+              containerWidth: SizeConfig.width * 0.5,
               paddingcontainerVertical: 60),
           mobileLayout: (context) => SignInLayout(
               containerWidth: SizeConfig.width * 0.6,

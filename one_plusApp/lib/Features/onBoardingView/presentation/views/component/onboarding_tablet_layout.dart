@@ -2,9 +2,9 @@ import 'dart:isolate';
 
 import 'package:flutter/material.dart';
 import 'package:one_plus/Features/onBoardingView/data/models/onBoardinItemModels.dart';
-import 'package:one_plus/Features/onBoardingView/presentation/views/component/FloatinActionButton.dart';
+import 'package:one_plus/Features/onBoardingView/presentation/views/component/floatin_action_button.dart';
 import 'package:one_plus/Features/onBoardingView/presentation/views/component/Indicator.dart';
-import 'package:one_plus/Features/onBoardingView/presentation/views/component/PageViewBuilder.dart';
+import 'package:one_plus/Features/onBoardingView/presentation/views/component/page_view_builder.dart';
 import 'package:one_plus/generated/l10n.dart';
 
 class onBoardingTabletLayout extends StatelessWidget {

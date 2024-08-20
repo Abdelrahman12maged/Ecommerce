@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
-import 'package:one_plus/Features/Auth/data/models/SignInModel.dart';
 import 'package:one_plus/Features/Auth/domain/entity/user.dart';
 import 'package:one_plus/core/errors/failu.dart';
 import 'package:one_plus/core/params/params.dart';
 
+import '../../data/models/signIn_model.dart';
 import '../repositry/base_Auth_repo.dart';
 
 class SignInUsecase {

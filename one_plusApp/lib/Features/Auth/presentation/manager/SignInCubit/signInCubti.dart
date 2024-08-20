@@ -18,10 +18,8 @@ class SignInCubit extends Cubit<SignInStates> {
   TextEditingController signInEmail = TextEditingController();
   TextEditingController signInPassword = TextEditingController();
   TextEditingController confirmPassword = TextEditingController();
-  
-  
-  final SignInUsecase signInUsecase;
 
+  final SignInUsecase signInUsecase;
 
   SignIn(UserParams params) async {
     emit(SignInLoading());

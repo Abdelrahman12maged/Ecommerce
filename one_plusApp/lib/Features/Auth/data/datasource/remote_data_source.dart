@@ -1,10 +1,10 @@
 import 'package:dartz/dartz.dart';
-import 'package:one_plus/Features/Auth/data/models/SignInModel.dart';
-import 'package:one_plus/Features/Auth/data/models/userModel.dart';
+import 'package:one_plus/Features/Auth/data/models/signIn_model.dart';
+import 'package:one_plus/Features/Auth/data/models/user_model.dart';
 
 import 'package:device_preview/device_preview.dart';
 import 'package:dio/dio.dart';
-import 'package:one_plus/Features/Auth/data/models/userModel.dart';
+import 'package:one_plus/Features/Auth/data/models/user_model.dart';
 import 'package:one_plus/Features/Auth/domain/usecases/signUp_useCases.dart';
 import 'package:one_plus/core/databases/api/api_consumer.dart';
 import 'package:one_plus/core/databases/api/end_points.dart';
@@ -14,12 +14,13 @@ import 'package:one_plus/core/errors/expentions.dart';
 import '../../../../core/errors/failure.dart';
 import '../../../../core/params/params.dart';
 
-// abstract class baseAuthRemotData {
-//   Future<UserModel> signUp(SingUpParams params);
-//   // Future<UserModel> signIn();
-// }
+abstract class baseAuthRemotData {
+  Future<UserModel> signUp(UserParams params);
+  Future<SignInModel> signIn(UserParams params);
+  // Future<UserModel> signIn();
+}
 
-class AuthRemoteData {
+class AuthRemoteData  extends baseAuthRemotData{
   final ApiConsumer apiservice;
 
   AuthRemoteData({required this.apiservice});

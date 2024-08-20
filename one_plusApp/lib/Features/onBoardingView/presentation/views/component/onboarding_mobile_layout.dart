@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:one_plus/Features/onBoardingView/presentation/views/component/PageViewBuilder.dart';
+import 'package:one_plus/Features/onBoardingView/presentation/views/component/page_view_builder.dart';
 
 import '../../../data/models/onBoardinItemModels.dart';
 

@@ -9,6 +9,7 @@ import 'package:one_plus/Features/Auth/domain/usecases/signUp_useCases.dart';
 import 'package:one_plus/Features/Auth/presentation/manager/SignUpCubit/signup_cubit.dart';
 import 'package:one_plus/Features/Auth/presentation/view/widgets/SignUpLayout.dart';
 import 'package:one_plus/Features/Auth/presentation/view/widgets/signup_desktop_layout.dart';
+import 'package:one_plus/Features/Home/presentation/view/widgets/home_view_desktop_layout.dart';
 import 'package:one_plus/core/databases/api/dio_consumer.dart';
 import 'package:one_plus/core/utils/SizieConfig.dart';
 
@@ -17,34 +18,22 @@ import '../../../../core/widgets/AdaptiveLayout.dart';
 import '../../../../core/widgets/CustomAppBar.dart';
 import '../../../../generated/l10n.dart';
 
-class SignUpView extends StatelessWidget {
-  const SignUpView({super.key});
+class HomeViewProduct extends StatelessWidget {
+  const HomeViewProduct({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => SignUpCubit(
-          SignUpUseCase(
-              baseAuthrepo: ImpAuthRepo(
-                  baseAuthRemoteDataSource:
-                      AuthRemoteData(apiservice: DioConsumer(dio: Dio()))))
-          ),
-      child: Scaffold(
-        appBar: CustomAppBar(
-          textButton: S.of(context).login,
-          onTapButton: () {
-            GoRouter.of(context).push(AppRouter.kLoginView);
-          },
-        ),
-        body: AdaptiveLayout(
-          desktopLayout: (context) => SignUpDesktopLayout(),
-          tabletLayout: (context) => SignUpLayout(alignment: Alignment.center,
-              containerWidth: SizeConfig.width * 0.5,
-              paddingcontainerVertical: 60),
-          mobileLayout: (context) => SignUpLayout(alignment: Alignment.center,
-              containerWidth: SizeConfig.width * 0.6,
-              paddingcontainerVertical: 60),
-        ),
+    return Scaffold(
+      appBar: CustomAppBar(
+        textButton: S.of(context).login,
+        onTapButton: () {
+          GoRouter.of(context).push(AppRouter.kLoginView);
+        },
+      ),
+      body: AdaptiveLayout(
+        desktopLayout: (context) => HomeViewDesktopLayout(),
+        tabletLayout: (context) =>HomeViewDesktopLayout() ,
+        mobileLayout: (context) =>HomeViewDesktopLayout(),
       ),
     );
   }
