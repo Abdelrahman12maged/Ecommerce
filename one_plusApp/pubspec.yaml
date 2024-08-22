@@ -90,3 +90,4 @@ flutter_assets:
   output_path: lib/core/utils
   filename: assetsImages.dart
   field_prefix: null
+  

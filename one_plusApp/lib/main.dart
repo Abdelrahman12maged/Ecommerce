@@ -18,10 +18,10 @@ import 'core/utils/SizieConfig.dart';
 void main() async {
   runApp(
     DevicePreview(
-      availableLocales: [Locale("ar"), Locale("en")],
-      enabled: true,
-      builder: (context) => const MyApp()),
-      );
+        availableLocales: [Locale("ar"), Locale("en")],
+        enabled: true,
+        builder: (context) => const MyApp()),
+  );
 }
 
 class MyApp extends StatelessWidget {

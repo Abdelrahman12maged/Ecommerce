@@ -15,7 +15,7 @@ class textHaveOrNotHaveAccount extends StatelessWidget {
     return Row(
       children: [
         
-      Expanded(flex: 0,
+      Expanded(
         child: Text(text1)),
         Expanded(
           child: InkWell(onTap: onTapText2,
