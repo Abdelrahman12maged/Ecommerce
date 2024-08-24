@@ -8,18 +8,15 @@ class ProductCircleAvatarItems extends StatelessWidget {
   double avatarRadius;
   @override
   Widget build(BuildContext context) {
-    // double avatarRadius = SizeConfig.width < SizeConfig.tablet ? 30 : 45;
-
-    double imageSize = SizeConfig.width < SizeConfig.tablet ? 40 : 60;
-
+    
     return Padding(
-      padding: const EdgeInsets.only(right: 5, left: 5, top: 15),
+      padding: const EdgeInsets.only(right: 5, left: 5,),
       child: Column(
         children: [
           CircleAvatar(
             child: Container(
-              height: imageSize,
-              width: imageSize,
+              height: 60,
+              width: 60,
               child: Image.asset(Assets.imagesMouse),
             ),
             radius: avatarRadius,

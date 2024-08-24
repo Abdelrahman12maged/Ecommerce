@@ -13,9 +13,9 @@ class ProductCategorylistItems extends StatelessWidget {
         : avatarRadius * 2.9;
 
     return Container(
-      width: MediaQuery.of(context).size.width,
+    //  width: MediaQuery.of(context).size.width,
       height: avatarHeight,
-      color: Colors.red,
+      //color: Colors.red,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: 12,

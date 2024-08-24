@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:one_plus/Features/Home/presentation/view/widgets/dots_banner.dart';
+import 'package:one_plus/Features/Home/presentation/view/widgets/banner_card.dart';
 import 'package:one_plus/core/utils/assetsImages.dart';
 
 class ProductBanner extends StatefulWidget {
@@ -11,11 +13,9 @@ class _BannerCarouselState extends State<ProductBanner> {
   int _currentPage = 0;
 
   final List<String> imageList = [
-  
-   Assets.imagesImg2Mobile,
-   Assets.imagesImg2Mobile,
-   Assets.imagesImg2Mobile,
-  
+    Assets.imagesImg2Mobile,
+    Assets.imagesImg2Mobile,
+    Assets.imagesImg2Mobile,
   ];
 
   @override
@@ -45,8 +45,9 @@ class _BannerCarouselState extends State<ProductBanner> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-
-        Expanded(
+        Container(
+          height: 250,
+          
           child: PageView.builder(
             controller: _pageController,
             onPageChanged: (index) {
@@ -56,36 +57,16 @@ class _BannerCarouselState extends State<ProductBanner> {
             },
             itemCount: imageList.length,
             itemBuilder: (context, index) {
-              return Container(
-                margin: EdgeInsets.all(10.0),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10.0),
-                  image: DecorationImage(
-                    image: AssetImage(imageList[index]),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              );
+              return bannerCard(image: imageList[index]);
             },
           ),
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: List.generate(imageList.length, (index) {
-            return Container(
-              width: 8.0,
-              height: 8.0,
-              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 4.0),
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: _currentPage == index
-                    ? Colors.blueAccent
-                    : Colors.grey,
-              ),
-            );
-          }),
-        ),
+                DotsWidget(imageList: imageList, currentPage: _currentPage),
+
       ],
     );
   }
 }
+      //  DotsWidget(imageList: imageList, currentPage: _currentPage),
+
+
