@@ -8,6 +8,8 @@ import 'package:one_plus/Features/Auth/presentation/view/SignUpView.dart';
 import 'package:one_plus/Features/Home/presentation/view/home_view.dart';
 import 'package:one_plus/Features/onBoardingView/presentation/views/onboarding_screen.dart';
 
+import '../../Features/admin_panel/presentation/view/admin_Panel_View.dart';
+
 abstract class AppRouter {
   static const kLoginView = '/loginview';
   static const kSignUpView = '/signupview';
@@ -16,7 +18,7 @@ abstract class AppRouter {
     routes: [
       GoRoute(
         path: '/',
-        builder: (context, state) => HomeViewProduct(),
+        builder: (context, state) => AdminPanelView(),
       ),
       GoRoute(
         path: kSignUpView,

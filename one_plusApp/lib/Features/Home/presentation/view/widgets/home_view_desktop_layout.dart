@@ -22,7 +22,76 @@ class HomeViewDesktopLayout extends StatelessWidget {
             ),
             ProductCategorylistItems(),
             ProductBanner(),
-            AllProductsListsSections()
+            AllProductsListsSections(),
+
+
+ Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Table(
+          border: TableBorder.all(), // Adds borders to the table
+          columnWidths: const {
+            0: FlexColumnWidth(1), // Column 1 takes 1 part of the space
+            1: FlexColumnWidth(2), // Column 2 takes 2 parts of the space
+            2: FlexColumnWidth(1), // Column 3 takes 1 part of the space
+          },
+          children: [
+            // Row 1
+            TableRow(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text('Header 1'),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text('Header 2'),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text('Header 3'),
+                ),
+              ],
+            ),
+            // Row 2
+            TableRow(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text('Row 1, Col 1'),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text('Row 1, Col 2'),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text('Row 1, Col 3'),
+                ),
+              ],
+            ),
+            // Row 3
+            TableRow(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text('Row 2, Col 1'),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text('Row 2, Col 2'),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text('Row 2, Col 3'),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+  
+
+
           ],
         ),
       ),

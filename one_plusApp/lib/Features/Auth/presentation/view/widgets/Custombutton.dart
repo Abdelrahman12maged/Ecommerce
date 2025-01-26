@@ -9,38 +9,42 @@ class CustomButton extends StatelessWidget {
   final Color? background;
   final VoidCallback function;
   final String text;
-
+  final BoxBorder? border;
+  final TextStyle? style;
   const CustomButton({
     Key? key,
-     this.width,
-     this.height,
-    this.background  ,
+    this.width,
+    this.height,
+    this.style,
+    this.background,
+    this.border,
     required this.function,
     required this.text,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-       SizeConfig.init(context);
+    SizeConfig.init(context);
 
     double buttonWidth = SizeConfig.width * 0.3;
     //double buttonHeight = SizeConfig.height * 0.3;
-
-     buttonWidth = buttonWidth.clamp(20.0, 120.0);
-   //  buttonHeight = buttonHeight.clamp(20.0, 35.0);
+    // final border = Border.all(color: Colors.deepOrange);
+    buttonWidth = buttonWidth.clamp(20.0, 130.0);
+    //  buttonHeight = buttonHeight.clamp(20.0, 35.0);
     return Container(
       decoration: BoxDecoration(
+        border: border,
         borderRadius: BorderRadius.circular(25),
         color: background ?? AppColorsLight.customButtonMaincolor,
       ),
       width: width ?? buttonWidth,
-      height: height ,
+      height: height,
       child: MaterialButton(
         onPressed: function,
         child: Center(
           child: Text(
             text,
-            style: Theme.of(context).textTheme.displayMedium,
+            style: style ?? Theme.of(context).textTheme.displayMedium,
             // TextStyle(
             //   color: Color.fromARGB(255, 231, 224, 224),
             //   fontSize: 20,
