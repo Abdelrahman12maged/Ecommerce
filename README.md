@@ -2,7 +2,6 @@
 
 **Ecommerce** is a **cross-platform e-commerce application** built with **Flutter** and **Dart**, supporting **mobile, tablet, and desktop** platforms. The app features **responsive UI/UX**, **Dark/Light mode**, **localization (Arabic & English)**, and **state management using Bloc/Cubit**.  
 
-[📱 Google Play Link](#)  <!-- ضع رابط التطبيق إذا متاح -->
 
 ---
 
