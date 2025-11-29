@@ -32,6 +32,8 @@
 <img width="200" alt="لقطة الشاشة 2025-11-29 141705" src="https://github.com/user-attachments/assets/868adb5c-c24f-424c-b804-c79126dced1a" />
 <img width="200"  alt="لقطة الشاشة 2025-11-29 141628" src="https://github.com/user-attachments/assets/26187b5f-45e8-49ee-967e-bf8dcbafdba6" />
 <img width="500" alt="لقطة الشاشة 2025-11-29 143740" src="https://github.com/user-attachments/assets/5d3fdbab-44b1-4a04-bfef-1e82dcfd07c0" />
+<img width="500"  alt="لقطة الشاشة 2025-11-29 144408" src="https://github.com/user-attachments/assets/92f5c532-499b-4e16-b711-b4ce3fcfe36f" />
+<img width="500"  alt="لقطة الشاشة 2025-11-29 144447" src="https://github.com/user-attachments/assets/c03bab52-aab4-40de-8f52-ebc9ad7ca7de" />
 
 ---
 
